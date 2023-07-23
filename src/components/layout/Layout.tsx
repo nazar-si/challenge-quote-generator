@@ -8,13 +8,13 @@ type Props = {
 export default function Layout({children}: Props) {
   return (
     <div className={style.wrapper}>
-        <header>
+        <header className={style.header}>
           Header
         </header>
-        <main>
+        <main className={style.main}>
           {children}
         </main>
-        <footer>
+        <footer className={style.footer}>
           Footer
         </footer>
     </div>
