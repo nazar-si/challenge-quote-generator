@@ -19,5 +19,3 @@ export const getQuotesQuery = (params?: GetRequestParams) => {
     if (!params) return `${BaseURL}`
     return `${BaseURL}?${toQueryString(stringifyParams(params))}`
 };
-
-console.log(getQuotesQuery({ author: "Albert Einstein", genre: "science", page: 1, limit: 10 }))

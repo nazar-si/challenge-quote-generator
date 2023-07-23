@@ -12,15 +12,15 @@ export type GetRandomRequestParams = {
     count?: number,
 }
 
-export interface IQuote {
+export interface IQuoteResponse {
     statusCode:  number;
     message:     string;
     pagination:  Pagination;
     totalQuotes: number;
-    data:        Datum[];
+    data:        Array<Quote>;
 }
 
-export interface Datum {
+export interface Quote {
     _id:         string;
     quoteText:   string;
     quoteAuthor: string;

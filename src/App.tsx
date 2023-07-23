@@ -1,11 +1,10 @@
 import Layout from "./components/layout/Layout"
+import Quote from "./components/quote/Quote"
 
 function App() {
   return (
     <Layout>
-      <>
-      Hello, World!
-      </>
+      <Quote quote={{quoteText: "Test"}}></Quote>
     </Layout>
   )
 }
