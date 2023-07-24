@@ -45,6 +45,18 @@
   resolved "https://registry.yarnpkg.com/@csstools/selector-specificity/-/selector-specificity-3.0.0.tgz#798622546b63847e82389e473fd67f2707d82247"
   integrity sha512-hBI9tfBtuPIi885ZsZ32IMEU/5nlZH/KOVYJCOh7gyMxaVLGmLedYqFN6Ui1LXkI8JlC8IsuC0rF0btcRZKd5g==
 
+"@effect/data@^0.16.0":
+  version "0.16.1"
+  resolved "https://registry.yarnpkg.com/@effect/data/-/data-0.16.1.tgz#ddca0ffd28157fbe91dc8465820abd303c46ba13"
+  integrity sha512-rIoLk+5xY1lakbzd7k5xbuPvfiR+BSQSrOyxX5Fo5oXWt1a29k31K/0Cq+9NtwqsAE7aNMlQtw6Z1d0Sxw1i9Q==
+
+"@effect/io@^0.35.0":
+  version "0.35.2"
+  resolved "https://registry.yarnpkg.com/@effect/io/-/io-0.35.2.tgz#424707aead506f85b21a2a403286a04259bf9907"
+  integrity sha512-+F9A5785QmjK8OOO5d5SDHcZjNwpp0D8nAf7PlGSXPBFxeex2S5qYhhlUbE1zBQeTZoDwp40UIIMtgTb8yFOTw==
+  dependencies:
+    "@effect/data" "^0.16.0"
+
 "@esbuild/android-arm64@0.18.16":
   version "0.18.16"
   resolved "https://registry.yarnpkg.com/@esbuild/android-arm64/-/android-arm64-0.18.16.tgz#34f562abc0015933aabd41b3d50d8d3359e30155"
@@ -1093,6 +1105,14 @@ dotenv@^16.0.3:
   version "16.3.1"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.3.1.tgz#369034de7d7e5b120972693352a3bf112172cc3e"
   integrity sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==
+
+effect@^2.0.0-next.19:
+  version "2.0.0-next.19"
+  resolved "https://registry.yarnpkg.com/effect/-/effect-2.0.0-next.19.tgz#d074cc69c423f041bc43f123feee53064578e295"
+  integrity sha512-Zz6mnnu1xNWPzGs27r0tV7Tvruio5BYEgzChxqULJS/M35MRS02vC8lEURnvqNoAAEbViOUyjC5W9AGQ3fJ6LQ==
+  dependencies:
+    "@effect/data" "^0.16.0"
+    "@effect/io" "^0.35.0"
 
 electron-to-chromium@^1.4.431:
   version "1.4.468"

@@ -1,0 +1,16 @@
+.wrapper{
+    height: 100%;
+}
+.centerWrapper{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    main{
+        flex: 1;
+        display: grid;
+        place-items: center;
+    }
+}

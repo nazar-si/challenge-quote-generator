@@ -1,10 +1,10 @@
 import Layout from "./components/layout/Layout"
-import Quote from "./components/quote/Quote"
+import Main from "./components/main/Main"
 
 function App() {
   return (
     <Layout>
-      <Quote quote={{quoteText: "Test"}}></Quote>
+      <Main/>
     </Layout>
   )
 }
