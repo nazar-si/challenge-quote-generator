@@ -8,7 +8,7 @@ import { IQuoteResponse } from "../../domain/types";
 import Author from "../author/Author";
 import Pagination from "../pagination/Pagination";
 import Scroller from "../scroller/Scroller";
-import { IconChevronLeft } from "@tabler/icons-react";
+import { IconChevronLeft, IconReload } from "@tabler/icons-react";
 
 export default function Main() {
   const [author, setAuthor] = useState("");
@@ -42,6 +42,12 @@ export default function Main() {
     catch: (err)=> new Error(`${err}`)
   }), []);
 
+  function generateNew(){
+    setData(null);
+    setPage(1);
+    const getResponse = authorUpdatedEffect("", 1);
+    Effect.runPromise(getResponse);
+  }
 
   useEffect(() => {
     setData(null);
@@ -61,6 +67,9 @@ export default function Main() {
       {!author && (
         <div className={style.centerWrapper}>
           <main>
+            <div className={style.back} onClick={generateNew}>
+              <IconReload size={32}/>
+            </div>
             <Quote quote={data ? data.data[0] : data} />
             {/* <Quote quote={null}/> */}
           </main>
