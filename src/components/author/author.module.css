@@ -21,3 +21,11 @@
         opacity: 0.75;
     }   
 }
+
+.authorSkeleton{
+    display: inline-block;
+    height: 1em;
+    width: 200px;
+    background-color: #ccc;
+    border-radius: 4px;
+}
