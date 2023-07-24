@@ -36,6 +36,15 @@ export default function Layout({children}: Props) {
               <IconGithub/>
             </a>
           </p>
+          <p className={style.footerP}>
+            API provided by{" "}
+            <a
+              href="https://github.com/pprathameshmore/QuoteGarden"
+              target="_blank"
+            >
+              Prathamesh More
+            </a>
+          </p>
         </footer>
     </div>
   )

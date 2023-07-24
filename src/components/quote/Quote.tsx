@@ -29,7 +29,7 @@ function LoadingState() {
         .fill(0)
         .map((_, i) => (
           <span key={i} className={style.skelet} style={{
-            width: `${50 - i * 3}vw`
+            width: `${50}vw`
           }} />
         ))}
     </>
