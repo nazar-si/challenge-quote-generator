@@ -1,0 +1,23 @@
+.wrapper{
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+    height: 64px;
+}
+
+.authorName{
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    &:hover{
+        color: #08f;
+    }
+}
+
+.genre{
+    .title{ 
+        opacity: 0.75;
+    }   
+}

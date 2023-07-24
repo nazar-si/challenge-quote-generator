@@ -3,13 +3,19 @@ import style from "./author.module.css"
 
 type Props = {
     author: string 
+    genre: string
     setAuthor: React.Dispatch<React.SetStateAction<string>>
 }
 
-export default function Author({author}: Props) {
+export default function Author({author, genre}: Props) {
   return (
-    <div>
-        {author}
+    <div className={style.wrapper}>
+        <button className={style.authorName}>
+          {author}
+        </button>
+        <div className={style.genre}>
+          <span className={style.title}>Genre:</span> {genre}
+        </div>
     </div>
   )
 }

@@ -5,9 +5,10 @@ import { Effect } from "effect";
 import axios from "axios";
 import { getQuotesQuery, getRandomQuotesQuery } from "../../domain/query";
 import { IQuoteResponse } from "../../domain/types";
+import Author from "../author/Author";
 
 export default function Main() {
-  const [author, ] = useState("");
+  const [author, setAuthor] = useState("");
   const [data, setData] = useState<null | IQuoteResponse>(null); 
   
   useEffect(()=>{
@@ -37,7 +38,7 @@ export default function Main() {
             {/* <Quote quote={null}/> */}
           </main>
           <footer>
-            {data && data.data[0].quoteAuthor}
+            <Author author={data ? data.data[0].quoteAuthor : ""} genre={data ? data.data[0].quoteGenre : ""} setAuthor={setAuthor}/>
           </footer>
         </div>
       }
