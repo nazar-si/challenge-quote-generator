@@ -7,6 +7,8 @@ import { getQuotesQuery, getRandomQuotesQuery } from "../../domain/query";
 import { IQuoteResponse } from "../../domain/types";
 import Author from "../author/Author";
 import Pagination from "../pagination/Pagination";
+import Scroller from "../scroller/Scroller";
+import { IconChevronLeft } from "@tabler/icons-react";
 
 export default function Main() {
   const [author, setAuthor] = useState("");
@@ -74,9 +76,14 @@ export default function Main() {
       {author && (
         <div className={style.fullWrapper}>
           <main>
-            {(data && !pageUpdating)
-              ? data.data.map((d) => <Quote quote={d} key={d._id} />)
-              : Array(3).fill(0).map(()=><Quote quote={null} />)}
+            <div className={style.back} onClick={()=>setAuthor('')}>
+              <IconChevronLeft size={32}/>
+            </div>
+            <Scroller>
+              {(data && !pageUpdating)
+                ? data.data.map((d) => <Quote quote={d} key={d._id} genre={true}/>)
+                : Array(3).fill(0).map(()=><Quote quote={null} />)}
+            </Scroller>
           </main>
           <footer>
             {data && (

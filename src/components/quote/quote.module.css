@@ -18,6 +18,10 @@
     position:absolute;
     color: #888;
     top: -4rem;
+    span{
+      margin-left: 1rem;
+      font-size: 18px;
+    }
 }
 
 .skelet {
