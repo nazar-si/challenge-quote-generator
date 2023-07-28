@@ -17,3 +17,5 @@ Here is the description of the task:
 - **Effect.js** - just fun expereminet with new hype library 
 - **Vite Bundler** - to hype even more (btw. it's really great)
 
+## How to run
+To run this project you may 

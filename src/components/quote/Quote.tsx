@@ -30,9 +30,7 @@ function LoadingState() {
       {Array(3)
         .fill(0)
         .map((_, i) => (
-          <span key={i} className={style.skelet} style={{
-            width: `${50}vw`
-          }} />
+          <div key={i} className={style.skelet}/>
         ))}
     </>
   );
